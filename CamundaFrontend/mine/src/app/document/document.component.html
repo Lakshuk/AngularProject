@@ -1,0 +1,32 @@
+
+<div class="min-h-screen flex items-center justify-center bg-gray-100" style="background: linear-gradient(to right, #004E92, #000428);">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-lg">
+        <h1 class="text-xl font-semibold text-center text-black py-3 rounded-md">DOCUMENT UPLOAD</h1>
+        <form [formGroup]="uploadForm" (ngSubmit)="uploadDocument()" enctype="multipart/form-data" class="mt-4 space-y-4">
+            <div class="mb-4">
+                <label for="bankstatement" class="block text-sm font-medium text-gray-700">BANK STATEMENT</label>
+                <input type="file" id="bankstatement" class="w-full px-4 py-2 border rounded-md focus:ring focus:ring-blue-200"
+                    placeholder="Upload file" (change)="onFileChange($event, 'bank_statement')">
+            </div>
+            <div class="mb-4">
+              <label for="income_tax_return" class="block text-sm font-medium text-gray-700">INCOME TAX RETURN</label>
+              <input type="file" id="income_tax_return" class="w-full px-4 py-2 border rounded-md focus:ring focus:ring-blue-200"
+                (change)="onFileChange($event, 'income_tax_return')">
+            </div>
+            <div class="mb-4">
+              <label for="appointment_letter" class="block text-sm font-medium text-gray-700">PAY SLIP</label>
+              <input type="file" id="appointment_letter" class="w-full px-4 py-2 border rounded-md focus:ring focus:ring-blue-200"
+                (change)="onFileChange($event, 'appointment_letter')">
+            </div>
+            <div class="mb-4">
+              <label for="business_certificate" class="block text-sm font-medium text-gray-700">GOVERNMENT ID</label>
+              <input type="file" id="business_certificate" class="w-full px-4 py-2 border rounded-md focus:ring focus:ring-blue-200"
+                (change)="onFileChange($event, 'business_certificate')">
+            </div>
+            <button type="submit"
+                class="w-full bg-blue-600 text-white font-semibold py-2 rounded-md hover:bg-blue-700 focus:ring focus:ring-blue-300 transition-all">
+                SUBMIT
+            </button>
+        </form>
+    </div>
+  </div>

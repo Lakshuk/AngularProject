@@ -1,0 +1,71 @@
+<div class="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-900 to-gray-900 p-4">
+    <div class="bg-white shadow-lg rounded-2xl p-6 w-full max-w-4xl">
+        <h2 class="text-2xl font-semibold text-gray-700 text-center mb-6">Personal Informations</h2>
+        <form [formGroup]="cibilform" (ngSubmit)="onsubmit()" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Left Column -->
+            <div>
+                <label class="block text-sm font-medium text-gray-600">Full Name</label>
+                <input type="text" formControlName="fullname" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter your name" required>
+
+                <label class="block text-sm font-medium text-gray-600 mt-3">Date of Birth</label>
+                <input type="text" formControlName="dateofbirth" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="DD/MM/YYYY" required>
+
+                <label class="block text-sm font-medium text-gray-600 mt-3">Gender</label>
+                <input type="text" formControlName="gender" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Male/Female/Other" required>
+
+                <label class="block text-sm font-medium text-gray-600 mt-3">Marital Status</label>
+                <input type="text" formControlName="marital_status" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Single/Married" required>
+
+                <label class="block text-sm font-medium text-gray-600 mt-3">Nationality</label>
+                <input type="text" formControlName="nationality" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Indian/Other" required>
+
+                
+            </div>
+
+            <!-- Right Column -->
+            <div>
+                <label class="block text-sm font-medium text-gray-600">Company Name</label>
+                <input type="text" formControlName="company_name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Your Company" required>
+
+                <label class="block text-sm font-medium text-gray-600 mt-3">Current Address</label>
+                <input type="text" formControlName="current_address" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Street, City" required>
+
+                <label class="block text-sm font-medium text-gray-600 mt-3">Permanent Address</label>
+                <input type="text" formControlName="permanent_address" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Street, City" required>
+
+                <label class="block text-sm font-medium text-gray-600 mt-3">Phone Number</label>
+                <input type="text" formControlName="phonenumber" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="10-digit number" required>
+
+                <label class="block text-sm font-medium text-gray-600 mt-3">SSN Number</label>
+                <input type="text" formControlName="aadharnumber" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="9-digit number" required>
+
+                <label class="block text-sm font-medium text-gray-600 mt-3">Age</label>
+                <input type="text" formControlName="age" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="enter your age" required>
+            </div>
+
+            <!-- Full Width Fields -->
+            <div class="md:col-span-2">
+
+               
+                <label class="block text-sm font-medium text-gray-600 mt-3">Annual Income</label>
+                <input type="text" formControlName="annualincome" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter your annual income" required>
+                
+                <label class="block text-sm font-medium text-gray-600 mt-3">Employee Type</label>
+                <input type="text" formControlName="employeetype" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter your employeetype" required>
+
+                <label class="block text-sm font-medium text-gray-600 mt-3">Loan Amount</label>
+                <input type="text" formControlName="loan_amount" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter loan amount" required>
+
+
+                <!-- File Input for Document -->
+                <!-- File Input for Document -->
+                <label class="block text-sm font-medium text-gray-600 mt-3">Upload the BankStatement Document</label>
+                <input type="file" formControlName="document_path" id="document_path" accept="application/pdf, image/*"  (change)="onFileSelected($event)"  required />
+
+                <button type="submit" class="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+<!-- <div class="relative flex items-center justify-center min-h-screen" style="background: linear-gradient(to right, #004e92, #000428);">
+    <div class="absolute top-10 left-1/2 transform -translate-x-1/2 text-white text-4xl font-bold opacity-50">Loan Management</div>
+    <div class="bg-white shadow-lg rounded-2xl p-6 w-96 relative z-10">
+        <h2 class="text-xl font-semibold text-gray-700 text-center mb-4">Email Verification</h2>
+        <form [formGroup]="emailForm" (ngSubmit)="onsubmit()">
+            <label for="account" class="block text-sm font-medium text-gray-600">Enter Your Email</label>
+            <input type="text" id="email" formControlName="email" name="account" class="w-full mt-2 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter your Mail here" required>
+            <button type="submit" class="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300">Submit</button>
+        </form>
+    </div>
+</div> -->
+
+<div class="relative flex items-center justify-center min-h-screen">
+    <div class="relative z-10 w-full max-w-lg p-0"> <!-- Reduced max-width, increased padding -->
+        <div class="bg-white border-1 border-gray-400 rounded-2xl p-8"> <!-- Increased padding -->
+            <h2 class="text-3xl text-gray-700 text-center mb-6">Email Verification</h2> <!-- Increased margin -->
+            <form [formGroup]="emailForm" (ngSubmit)="onsubmit()">
+                <!-- Email input -->
+                <div class="form-outline mb-6"> <!-- Increased margin bottom -->
+                    <label for="email" class="block text-sm font-medium text-gray-600">Enter Your Email</label>
+                    <input type="text" id="email" formControlName="email" name="email"
+                        class="w-full mt-2 px-6 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="Enter your Mail here" required />
+                </div>
+
+                <!-- Terms of service checkbox -->
+                <div class="form-check d-flex justify-content-center mb-6"> <!-- Increased margin bottom -->
+                    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" />
+                    <label class="form-check-label" for="form2Example3g">
+                        I agree to all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
+                    </label>
+                </div>
+
+                <!-- Submit button -->
+                <div class="flex justify-center items-center"> <!-- Adjusted for centering -->
+                    <button type="submit" class="btn btn-primary btn-block btn-lg w-3/6 bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-300">
+                        Verify
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+  
